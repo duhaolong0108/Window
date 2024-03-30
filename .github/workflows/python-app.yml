@@ -1,9 +1,9 @@
 name: Greeting from Mona
-on: push
+on: pull_request
 jobs:
   job1:
     name: A
     runs-on: ubuntu-latest
     steps:
       - id: A
-        run: ls
+        run: python ./Main.py
