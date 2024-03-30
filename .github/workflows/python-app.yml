@@ -5,12 +5,11 @@ jobs:
     name: A
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
       
-      - id: Git
-        run: git clone https://github.com/duhaolong0108/Window
-
-      - id: Cd
-        run: cd Window
-      
-      - id: Run
-        run: python Main.py
+      - id: R
+        run: |
+          python Main.py
