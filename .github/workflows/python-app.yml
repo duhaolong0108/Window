@@ -5,5 +5,12 @@ jobs:
     name: A
     runs-on: ubuntu-latest
     steps:
-      - id: A
-        run: python ./Main.py
+      
+      - id: Git
+        run: git clone https://github.com/duhaolong0108/Window
+
+      - id: Cd
+        run: cd Window
+      
+      - id: Run
+        run: python Main.py
