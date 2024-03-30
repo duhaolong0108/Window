@@ -7,10 +7,4 @@ jobs:
     steps:
       
       - id: Git
-        run: git clone https://github.com/duhaolong0108/Window
-
-      - id: Cd
-        run: cd Window
-      
-      - id: Run
-        run: python Main.py
+        run: ping baidu.com
