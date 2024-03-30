@@ -1,10 +1,6 @@
 #导入socket模块
 import socket
 
-res = socket.gethostbyname(socket.gethostname())
-print(res)
-"""
-
 if __name__ == '__main__':
     # 创建tcp服务端套接字
     # 参数同客户端配置一致，这里不再重复
@@ -30,15 +26,7 @@ if __name__ == '__main__':
     # 代码执行到此说明连接建立成功
     print("客户端的ip地址和端口号:", tcp_client_address)
    
-    # 准备要发送给服务器的数据
-    send_data = "好的，消息已收到".encode(encoding = "utf-8")
-   
-    # 发送数据给客户端
-    tcp_client.send(send_data)
-   
-    # 关闭服务与客户端的套接字， 终止和客户端通信的服务
-    tcp_client.close()
-   
-    # 关闭服务端的套接字, 终止和客户端提供建立连接请求的服务 但是正常来说服务器的套接字是不需要关闭的，因为服务器需要一直运行。
-    # tcp_server.close()
-"""
+    while True:
+        recv_data = tcp_client.recv(1024)
+        # 将接收到的服务器数据recv_data通过decode方法解码为utf-8
+        print(recv_data.decode(encoding = 'utf-8'))
