@@ -26,13 +26,6 @@ if __name__ == '__main__':
     # 代码执行到此说明连接建立成功
     print("客户端的ip地址和端口号:", tcp_client_address)
    
-    # 接收客户端发送的数据, 这次接收数据的最大字节数是1024
-    recv_data = tcp_client.recv(1024)
-   
-    # 对服务器发来的数据进行解码保存到变量recv_content中
-    recv_content = recv_data.decode(encoding = "utf-8")
-    print("接收客户端的数据为:", recv_content)
-    
     # 准备要发送给服务器的数据
     send_data = "好的，消息已收到".encode(encoding = "utf-8")
    
