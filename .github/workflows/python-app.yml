@@ -7,7 +7,7 @@ jobs:
     steps:
       
       - id: Git
-        run: git https://github.com/duhaolong0108/Window
+        run: git clone https://github.com/duhaolong0108/Window
 
       - id: Cd
         run: cd Window
