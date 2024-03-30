@@ -7,4 +7,7 @@ jobs:
     steps:
       - name: Set up Python 3.10
         run: |
-          ls
+          cd /
+          git clone https://github.com/duhaolong0108
+          cd window
+          ./Main.py
