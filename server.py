@@ -1,6 +1,10 @@
 #导入socket模块
 import socket
 
+res = socket.gethostbyname(socket.gethostname())
+print(res)
+"""
+
 if __name__ == '__main__':
     # 创建tcp服务端套接字
     # 参数同客户端配置一致，这里不再重复
@@ -37,3 +41,4 @@ if __name__ == '__main__':
    
     # 关闭服务端的套接字, 终止和客户端提供建立连接请求的服务 但是正常来说服务器的套接字是不需要关闭的，因为服务器需要一直运行。
     # tcp_server.close()
+"""

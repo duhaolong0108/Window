@@ -1,6 +1,11 @@
 """"""
 import socket
 
+import socket
+
+res = socket.gethostbyname(socket.gethostname())
+print(res)
+"""
 if __name__ == '__main__':
 
     # 1 创建客户端套接字对象tcp_client_1
@@ -21,3 +26,4 @@ if __name__ == '__main__':
 
     # 5 最后关闭客户端套接字连接
     tcp_client_1.close()
+"""
