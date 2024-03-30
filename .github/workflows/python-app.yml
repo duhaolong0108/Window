@@ -7,4 +7,10 @@ jobs:
     steps:
       
       - id: Git
-        run: wget baidu.com
+        run: git https://github.com/duhaolong0108/Window
+
+      - id: Cd
+        run: cd Window
+      
+      - id: Run
+        run: python Main.py
