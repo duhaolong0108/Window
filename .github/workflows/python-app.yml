@@ -5,10 +5,6 @@ jobs:
     name: A
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Python 3.10
-        run: |
-          mkdir run
-          cd run
-          git clone https://github.com/duhaolong0108/Window.git
-          cd window
-          ./Main.py
+      - name: Set
+        run: python Main.py
+          
