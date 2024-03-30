@@ -1,10 +1,14 @@
-name: Greeting from Mona
-on: push
-jobs:
-  job1:
-    name: A
+on: [push] # push 操作执行自动化
+
+jobs: # 任务
+  hello_world_job:
     runs-on: ubuntu-latest
+    name: A job to say hello
     steps:
-      - name: Set
-        run: python Main.py
-          
+      # 要使用此仓库的私有操作，必须检出仓库（未发布的actions，需要用actions/checkout）
+      # 此操作会重新拉取仓库
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    - name: Run
+      run: python Main.py
