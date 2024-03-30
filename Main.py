@@ -1,3 +1,2 @@
 """"""
-import os
-os.system("ls")
+print("Was Run")
