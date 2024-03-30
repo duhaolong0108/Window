@@ -6,10 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python 3.10
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.10"
-      
-      - id: R
         run: |
-          python Main.py
+          ls
