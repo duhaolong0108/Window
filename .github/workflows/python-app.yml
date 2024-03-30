@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: A
-        run: python Main.py
+        run: ls
